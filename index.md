@@ -11,6 +11,15 @@ I am adding a test sentence here at 13:24 on 03/12/24.
 
 ## **Template VGA Design**
 ### **Project Set-Up**
+I setup a new Vivado Project using its setup wizard. 
+First step is creating a name for the project and selecting a storage location of your choosing.
+Here is where I encountered my first problem with the Vivado Design Suite. The software does not like when you create a project on your Onedrive. 
+To fix this, I had to create a folder on the C drive of the computer I will be working from for the rest of the semester. From their the rest of the project worked.
+
+Then I needed to select the project type. For now we select the RTL Project.
+
+...
+
 Summarise the project set-up and design flow. Include a screenshot of your own set-up, for example see the image of my Project Summary window below. Guideline 1 short paragraph.
 
 <img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/VGAPrjSum.png">
