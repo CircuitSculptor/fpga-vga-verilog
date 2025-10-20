@@ -3,7 +3,7 @@ title: System-on-Chip Design & Verification
 author:
   name: Bartlomiej Drapinski
   email: g00428194@atu.ie
-description: "FGPA VGA Project Blog"
+description: "FPGA VGA Project Blog"
 
 # Build settings
 remote_theme: jekyll/minima
