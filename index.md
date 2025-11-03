@@ -53,16 +53,19 @@ It included 6 files.
 
   This is the constraints file used to set the output pins of the VGA connector and other peripherals. The template constraints file for the Basys 3 can be viewed <a href="https://github.com/Digilent/digilent-xdc/raw/master/Basys-3-Master.xdc" target="_blank">here</a>. The VGA pinout diagram can be viewed <a href="https://cdn.jsdelivr.net/gh/circuitsculptor/fpga-vga-verilog@main/docs/4520445.PDF#page=20" target="_blank">here</a>.
 
+## Lab Work 03/11/2025
 
+This week I got a VGA caputre card to capture my output in a greater resolution compared to photos taken with a phone.
 
+Below are some crisp images of my output with my new setup.
 
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjSelfTestHiRes.png" alt="Self Test Hi Res Output" width='500'>
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjColourStripesHiRes.png" alt="Colour Stripes Hi Res Output" width='500'>
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjPolandFlagHiRes.png" alt="Colour Stripes Hi Res Output" width='500'>
 
-
-
-
+To get this to work I got a VGA to HDMI adapter that goes into a HDMI capture card. The card is then connected to my laptop and is viewed oo OBS Studio.
 
 # Above is mostly finished, below is template code
-
 
 This is my project summary after a successful bitstream generation.
 
