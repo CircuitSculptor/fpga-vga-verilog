@@ -7,12 +7,16 @@ categories: demo
 
 Blog Created on 20/10/25
 
-Updated at 19:35 on 28/10/25
+Updated at 17:30 on 10/11/25
 
 In this blog I will walk you through setting up a Vivado project, adding or creating some files and finally uploading your completed project on the Basys 3 FPGA.
 
 ## **Template VGA Design**
 ### **Project Set-Up**
+
+This is my project summary after a successful bitstream generation.
+
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjSumBD.png" alt="My Project Summary" width="500">
 
 I setup a new Vivado Project using its setup wizard. 
 First step is creating a name for the project and selecting a storage location of your choosing.
@@ -63,24 +67,44 @@ Below are some crisp images of my output with my new setup.
 <img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjColourStripesHiRes.png" alt="Colour Stripes Hi Res Output" width='500'>
 <img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjPolandFlagHiRes.png" alt="Colour Stripes Hi Res Output" width='500'>
 
-To get this to work I got a VGA to HDMI adapter that goes into a HDMI capture card. The card is then connected to my laptop and is viewed oo OBS Studio.
+To get this to work I got a VGA to HDMI adapter that goes into a HDMI capture card. The card is then connected to my laptop and is viewed in OBS Studio.
 
-# Above is mostly finished, below is template code
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjHDMIcapture.jpg" alt="HDMI Capture setup" width='500'>
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjOBSstudio.png" alt="OBS Studio" width='500'>
 
-This is my project summary after a successful bitstream generation.
+To add to the convinience of having the ability to record your work, I am using a USB Stick to load the bitstream rather than using Vivado and the Hadrware Manager.
 
-<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjSumBD.png" alt="My Project Summary" width="500">
+My process of getting it working is that I first looked through any documentation for the Basys 3 board. I found everything I needed in the Reference Manual <a href="https://cdn.jsdelivr.net/gh/circuitsculptor/fpga-vga-verilog@main/docs/4520445.PDF#page=12" target="_blank">on page 12</a>. 
 
-## **Template Code**
-Outline the structure and design of the Verilog code templates you were given. What do they do? Include reference to how a VGA interface works. Guideline: 2/3 short paragraphs, consider including screenshot(s).
-### **Simulation**
+From their I looked for a suitable USB Stick. I had a 4GB one that I had to format to FAT32 file system per the documentation. So now I was ready to upload my first bit file and see it working.
+
+My setup with the USB Stick
+
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjUSB.jpg" alt="USB Stick setup" width="500">
+
+But it didn't work at first and I wasn't sure why. So I asked ChatGPT for some assistance and it delivered. It told me that I was using the wrong file name for my bit file. I wanted to use the default name of VGATop.bit but the Basys 3 was expecting a file called config.bit. 
+
+So now I created a network of folders on my laptop so that I can store the bit files of each of my projects like my colour stripes and the flags demo. This will greatly speed up protoyping as I can now have many bit files created outside of lab time and when I come back I can run them all in a short amount of time to see which work and show what I thought I coded in.
+
+## Lab Work 10/11/2025
+
+files to add into repo
+VGAPrjRunSim
+VGAPrjBasicSchematic
+VGAPrjAdvSchematic
+VGAPrjImpl1
+VGAPrjImpl2
+VGAPrjImpl3
+VGAPrjImpl4
+VGAPrjImpl5
+
+### **What is Simulation?**
 Explain the simulation process. Reference any important details, include a well-selected screenshot of the simulation. Guideline: 1/2 short paragraphs.
-### **Synthesis**
+### **What is Synthesis?**
 Describe the synthesis and implementation processes. Consider including 1/2 useful screenshot(s). Guideline: 1/2 short paragraphs.
-### **Demonstration**
-Perhaps add a picture of your demo. Guideline: 1/2 sentences.
 
 ## **My VGA Design Edit**
+I have decided to create a slide show of all the flags in the European Union
 Introduce your own design idea. Consider how complex/achievabble this might be or otherwise. Reference any research you do online (use hyperlinks).
 ### **Code Adaptation**
 Briefly show how you changed the template code to display a different image. Demonstrate your understanding. Guideline: 1-2 short paragraphs.
@@ -91,6 +115,9 @@ Describe the synthesis & implementation outputs for your design, are there any d
 ### **Demonstration**
 If you get your own design working on the Basys3 board, take a picture! Guideline: 1-2 sentences.
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## **Template Code**
+Outline the structure and design of the Verilog code templates you were given. What do they do? Include reference to how a VGA interface works. Guideline: 2/3 short paragraphs, consider including screenshot(s).
 ## **More Markdown Basics**
 This is a paragraph. Add an empty line to start a new paragraph.
 
