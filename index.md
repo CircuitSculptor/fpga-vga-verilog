@@ -86,25 +86,36 @@ But it didn't work at first and I wasn't sure why. So I asked ChatGPT for some a
 
 So now I created a network of folders on my laptop so that I can store the bit files of each of my projects like my colour stripes and the flags demo. This will greatly speed up protoyping as I can now have many bit files created outside of lab time and when I come back I can run them all in a short amount of time to see which work and show what I thought I coded in.
 
-## Lab Work 10/11/2025
+## (Lab Work 10/11/2025)
 
-files to add into repo
-VGAPrjRunSim
-VGAPrjBasicSchematic
-VGAPrjAdvSchematic
-VGAPrjImpl1
-VGAPrjImpl2
-VGAPrjImpl3
-VGAPrjImpl4
-VGAPrjImpl5
+## Lab Work 17/11/2025
 
 ### **What is Simulation?**
-Explain the simulation process. Reference any important details, include a well-selected screenshot of the simulation. Guideline: 1/2 short paragraphs.
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjRunSim.png" alt="Vivado Run Simulation" width="400"> 
+Before running your code on the board itself as that takes time, it is good to simulate your code to see if it behaves the way you have coded it. In Vivado I can run a behavioural simulation which is the most common one for this application. This simulation is thanks to the Testbench that was written to simulate the hardware on the board.
+
+In industry, I might be very expensive to take a board from a working system and upload the code to it, which might result in unwanted results.
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjSignals.png" alt="Simulation signals">
+
 ### **What is Synthesis?**
+In the synthesis process, Vivado will start converting your code into the building blocks that form the Basys 3.
+
+First it will create schematics of your design. After you do any checks from the simulation output, you can visualise then in the schematics like shown below.
+
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjBasicSchematic.png" alt="Basic Schematic" width="300">
+
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjAdvSchematic.png" alt="Advanced Schematic" width="500">
+
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjImpl1.png" alt="Implementation1" width="500">
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjImpl2.png" alt="Implementation2" width="500">
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjImpl3.png" alt="Implementation3" width="500">
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjImpl4.png" alt="Implementation4" width="500">
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjImpl5.png" alt="Implementation5" width="500">
 Describe the synthesis and implementation processes. Consider including 1/2 useful screenshot(s). Guideline: 1/2 short paragraphs.
 
 ## **My VGA Design Edit**
-I have decided to create a slide show of all the flags in the European Union
+I have decided to create a slide show of all the flags in the European Union.
+
 Introduce your own design idea. Consider how complex/achievabble this might be or otherwise. Reference any research you do online (use hyperlinks).
 ### **Code Adaptation**
 Briefly show how you changed the template code to display a different image. Demonstrate your understanding. Guideline: 1-2 short paragraphs.
@@ -118,6 +129,9 @@ If you get your own design working on the Basys3 board, take a picture! Guidelin
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## **Template Code**
 Outline the structure and design of the Verilog code templates you were given. What do they do? Include reference to how a VGA interface works. Guideline: 2/3 short paragraphs, consider including screenshot(s).
+
+------------------------
+
 ## **More Markdown Basics**
 This is a paragraph. Add an empty line to start a new paragraph.
 
