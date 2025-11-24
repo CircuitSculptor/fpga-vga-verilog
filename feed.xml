@@ -1,6 +1,5 @@
 ---
 layout: none
-redirect_to: "https://circuitsculptor.github.io/fpga-vga-verilog/"
 ---
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -8,6 +7,17 @@ redirect_to: "https://circuitsculptor.github.io/fpga-vga-verilog/"
   <channel>
     <title>FPGA VGA Driver Project using the Xilinx Basys 3</title>
     <link>https://circuitsculptor.github.io/fpga-vga-verilog/</link>
-    <description>This feed is intentionally empty and redirects to the main site.</description>
+    <description>A student project implementing a VGA driver on the Xilinx Basys 3 FPGA using Verilog.</description>
+    <language>en-us</language>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+
+    <item>
+      <title>Project Overview</title>
+      <link>https://circuitsculptor.github.io/fpga-vga-verilog/</link>
+      <description>Introduction to the FPGA VGA Driver Project.</description>
+      <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+      <guid>https://circuitsculptor.github.io/fpga-vga-verilog/</guid>
+    </item>
+
   </channel>
 </rss>
