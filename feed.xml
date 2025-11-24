@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: null
 ---
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -7,17 +7,7 @@ layout: none
   <channel>
     <title>FPGA VGA Driver Project using the Xilinx Basys 3</title>
     <link>https://circuitsculptor.github.io/fpga-vga-verilog/</link>
-    <description>A student project implementing a VGA driver on the Xilinx Basys 3 FPGA using Verilog.</description>
-    <language>en-us</language>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-
-    <item>
-      <title>Project Overview</title>
-      <link>https://circuitsculptor.github.io/fpga-vga-verilog/</link>
-      <description>Introduction to the FPGA VGA Driver Project.</description>
-      <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-      <guid>https://circuitsculptor.github.io/fpga-vga-verilog/</guid>
-    </item>
-
+    <description>A project implementing VGA output on the Basys 3 using Verilog.</description>
   </channel>
 </rss>
+
