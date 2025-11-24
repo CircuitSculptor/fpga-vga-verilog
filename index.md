@@ -69,7 +69,15 @@ Below are some crisp images of my output with my new setup.
 <img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjColourStripesHiRes.png" alt="Colour Stripes Hi Res Output" width='500'>
 <img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjPolandFlagHiRes.png" alt="Colour Stripes Hi Res Output" width='500'>
 
-Here is a link to a video showing my flag sweep demo, [opens in a new tab](https://www.youtube.com/watch?v=iuI142aaKDM)
+Here is a video of my flag sweep demo
+
+The flags are shown in the following order: 
+
+Poland | Ireland | Germany | France | Italy | Ukraine | Luxemburg | Romania | Bulgaria | Austria | Bulgraia | Estonia | Latvia | Lithuania | Monaco | The Netherlands.
+
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/VGAPrjFlagsVideo.gif" alt="Flag Sweep Video" width='500'>
+
+If you want to move through the flags manually, you can do it through my video on [Youtube](https://www.youtube.com/watch?v=iuI142aaKDM)
 
 To get this to work I got a VGA to HDMI adapter that goes into a HDMI capture card. The card is then connected to my laptop and is viewed in OBS Studio.
 
@@ -131,8 +139,6 @@ Here is some more images of the internal connections.
 
 ## **My VGA Design Edit**
 I have decided to create a slide show of all the flags in the European Union. I have selected all the flags that are made up from vertical and horizontal stripes only. 
-
-The flags are shown in the following order: Poland, Ireland, Germany, France, Italy, Ukraine, Luxemburg, Romania, Bulgaria, Austria, Bulgraia, Estonia, Latvia, Lithuania, Monaco and the Netherlands.
 
 ### **Code Adaptation**
 To display my flags, I have modified the rows and column numbers to split up the screen to display each flag. It was a fun experience, seeing a completed flag with the right parameters.
