@@ -75,7 +75,9 @@ Here is a video of my flag sweep demo
 
 The flags are shown in the following order: 
 
-Poland | Ireland | Germany | France | Italy | Ukraine | Luxemburg | Romania | Bulgaria | Austria | Bulgraia | Estonia | Latvia | Lithuania | Monaco | The Netherlands.
+Poland | Ireland | Germany | France | Italy | Ukraine | Luxemburg | Romania
+
+Bulgaria | Austria | Bulgraia | Estonia | Latvia | Lithuania | Monaco | The Netherlands.
 
 <img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/VGAPrjFlagsVideo.gif" alt="Flag Sweep Video" width='500'>
 
