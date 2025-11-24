@@ -9,6 +9,8 @@ Blog Created on 20/10/25
 
 Updated at 17:30 on 10/11/25
 
+# FPGA VGA Driver Project
+
 In this blog I will walk you through setting up a Vivado project, adding or creating some files and finally uploading your completed project on the Basys 3 FPGA.
 
 ## **Template VGA Design**
@@ -67,6 +69,8 @@ Below are some crisp images of my output with my new setup.
 <img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjColourStripesHiRes.png" alt="Colour Stripes Hi Res Output" width='500'>
 <img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjPolandFlagHiRes.png" alt="Colour Stripes Hi Res Output" width='500'>
 
+Here is a link to a video showing my flag sweep demo, [opens in a new tab](https://www.youtube.com/watch?v=iuI142aaKDM)
+
 To get this to work I got a VGA to HDMI adapter that goes into a HDMI capture card. The card is then connected to my laptop and is viewed in OBS Studio.
 
 <img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjHDMIcapture.jpg" alt="HDMI Capture setup" width='500'>
@@ -84,9 +88,18 @@ My setup with the USB Stick
 
 But it didn't work at first and I wasn't sure why. So I asked ChatGPT for some assistance and it delivered. It told me that I was using the wrong file name for my bit file. I wanted to use the default name of VGATop.bit but the Basys 3 was expecting a file called config.bit. 
 
-So now I created a network of folders on my laptop so that I can store the bit files of each of my projects like my colour stripes and the flags demo. This will greatly speed up protoyping as I can now have many bit files created outside of lab time and when I come back I can run them all in a short amount of time to see which work and show what I thought I coded in.
+So now I created a network of folders on my laptop so that I can store the bit files of each of my projects like my colour stripes and the flags demo. This will greatly speed up protoyping as I can now have many bit files created outside of lab time and when I come back I can run them all in a short amount of time to see which work and show what I thought I coded in. I did install the Vivado design suite on my laptop as it had the required 80GB of storage available.
 
-## (Lab Work 10/11/2025)
+Nearing the end of this project, I have found that the Basys 3 board started accepting the default bit file name of VGATop. I don't have an explanation for why it is, but that means I don't have to change the file name, all I need is to run the bitstream generation or get it from my folder.
+
+## Lab Work 10/11/2025
+
+This work is from class work I did. It features the project pinout diagram in blocks, with all the internal and external connections. 
+
+To get this work into this blog, I didn't want to take a photo of it after looking back on the effort I took to get the VGA output recorded.
+
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjPinoutDiagramNotes.jpg" alt="Pinout Diagram from Class Notes" width="400"> <img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjSignalsNotes.jpg" alt="Signals from Class Notes" width="400"> 
+
 
 ## Lab Work 17/11/2025
 
@@ -102,50 +115,52 @@ In the synthesis process, Vivado will start converting your code into the buildi
 
 First it will create schematics of your design. After you do any checks from the simulation output, you can visualise then in the schematics like shown below.
 
-<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjBasicSchematic.png" alt="Basic Schematic" width="300">
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjBasicSchematic.png" alt="Basic Schematic" width="600"> <img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjAdvSchematic.png" alt="Advanced Schematic" width="600">
 
-<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjAdvSchematic.png" alt="Advanced Schematic" width="500">
+Then Vivado will create an implementation of the code. In the imnages below, Vivado shows how each block is connected together.
 
-<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjImpl1.png" alt="Implementation1" width="500">
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjImpl1.png" alt="Implementation1" width="300"> <img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjImpl5.png" alt="Implementation5" width="300">
+
+Here is some more images of the internal connections.
+
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjImpl3.png" alt="Implementation3" width="600">
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjImpl4.png" alt="Implementation4" width="600">
+
+
 <img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjImpl2.png" alt="Implementation2" width="500">
-<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjImpl3.png" alt="Implementation3" width="500">
-<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjImpl4.png" alt="Implementation4" width="500">
-<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjImpl5.png" alt="Implementation5" width="500">
-Describe the synthesis and implementation processes. Consider including 1/2 useful screenshot(s). Guideline: 1/2 short paragraphs.
 
 ## **My VGA Design Edit**
-I have decided to create a slide show of all the flags in the European Union.
+I have decided to create a slide show of all the flags in the European Union. I have selected all the flags that are made up from vertical and horizontal stripes only. 
 
-Introduce your own design idea. Consider how complex/achievabble this might be or otherwise. Reference any research you do online (use hyperlinks).
+The flags are shown in the following order: Poland, Ireland, Germany, France, Italy, Ukraine, Luxemburg, Romania, Bulgaria, Austria, Bulgraia, Estonia, Latvia, Lithuania, Monaco and the Netherlands.
+
 ### **Code Adaptation**
+To display my flags, I have modified the rows and column numbers to split up the screen to display each flag. It was a fun experience, seeing a completed flag with the right parameters.
+
+        POLAND: begin
+            // WHITE #FFFFFF
+            if(row >= 11'd0 && row <11'd240) begin
+                red_next  <= 4'b1111;
+                green_next <= 4'b1111;
+                blue_next  <= 4'b1111;
+            end
+            // RED #DC143C
+            else if(row >= 11'd240 && row <11'd480) begin
+                red_next   <= 4'b1101;
+                green_next <= 4'b0000;
+                blue_next  <= 4'b0000;
+            end 
+            if(count == COUNT_TO) begin
+                state_next = IRELAND;
+            end
+        end
+
 Briefly show how you changed the template code to display a different image. Demonstrate your understanding. Guideline: 1-2 short paragraphs.
 ### **Simulation**
 Show how you simulated your own design. Are there any things to note? Demonstrate your understanding. Add a screenshot. Guideline: 1-2 short paragraphs.
 ### **Synthesis**
 Describe the synthesis & implementation outputs for your design, are there any differences to that of the original design? Guideline 1-2 short paragraphs.
-### **Demonstration**
-If you get your own design working on the Basys3 board, take a picture! Guideline: 1-2 sentences.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## **Template Code**
 Outline the structure and design of the Verilog code templates you were given. What do they do? Include reference to how a VGA interface works. Guideline: 2/3 short paragraphs, consider including screenshot(s).
-
-------------------------
-
-## **More Markdown Basics**
-This is a paragraph. Add an empty line to start a new paragraph.
-
-Font can be emphasised as *Italic* or **Bold**.
-
-Code can be highlighted by using `backticks`.
-
-Hyperlinks look like this: [GitHub Help](https://help.github.com/).
-
-A bullet list can be rendered as follows:
-- vectors
-- algorithms
-- iterators
-
-Images can be added by uploading them to the repository in a /docs/assets/images folder, and then rendering using HTML via githubusercontent.com as shown in the example below.
-
-<img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/VGAPrjSrcs.png">
