@@ -110,12 +110,13 @@ This work is from class work I did. It features the project pinout diagram in se
 
 To get this work into this blog, I didn't want to take a photo of it after looking back on the effort I took to get the VGA output recorded. So I decided to take a walk from the far side of campus to the library where I could use the printers their to scan my work. I have used the scanner before for my maths assignment submissions.
 
-<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjPinoutDiagramNotes.jpg" alt="Pinout Diagram from Class Notes" width="400"> <img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjSignalsNotes.jpg" alt="Signals from Class Notes" width="400"> 
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjPinoutDiagramNotes.jpg" alt="Pinout Diagram from Class Notes" width="350"> <img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjSignalsNotes.jpg" alt="Signals from Class Notes" width="350"> 
 
 ## Lab Work 17/11/2025
 
 ### **What is Simulation?**
 <img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjRunSim.png" alt="Vivado Run Simulation" width="400"> 
+
 Before running your code on the board itself as that takes time, it is good to simulate your code to see if it behaves the way you have coded it. In Vivado I can run a behavioural simulation which is the most common one for this application. This simulation is thanks to the Testbench that was written to simulate the hardware on the board.
 
 In industry, I might be very expensive to take a board from a working system and upload the code to it, which might result in unwanted results.
