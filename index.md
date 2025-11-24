@@ -137,25 +137,102 @@ The flags are shown in the following order: Poland, Ireland, Germany, France, It
 ### **Code Adaptation**
 To display my flags, I have modified the rows and column numbers to split up the screen to display each flag. It was a fun experience, seeing a completed flag with the right parameters.
 
-        POLAND: begin
-            // WHITE #FFFFFF
-            if(row >= 11'd0 && row <11'd240) begin
-                red_next  <= 4'b1111;
-                green_next <= 4'b1111;
-                blue_next  <= 4'b1111;
-            end
-            // RED #DC143C
-            else if(row >= 11'd240 && row <11'd480) begin
-                red_next   <= 4'b1101;
+Below is a snippet of my flag sweep demo. 
+
+First is the counter variables. 
+
+First is the name of the state, POLAND, that name is from a parameter that lists all the possible states or flags in my case. Then I compute each part of the flag. In the case of Poland, it has 2 horizontal stripes divided evenly on the 480 vertical pixels. 
+
+    parameter BLACK = 0, POLAND = 1, IRELAND = 2, GERMANY = 3, FRANCE = 4, 
+    ITALY = 5, UKRAINE = 6, LUXEMBURG = 7, ROMANIA = 8, BELGIUM = 9, AUSTRIA = 10, 
+    BULGARIA = 11, ESTONIA = 12, LATVIA = 13, LITHUANIA = 14, MONACO = 15, NETHERLANDS = 16; 
+    reg [3:0] red_reg, green_reg, blue_reg, red_next, green_next, blue_next;
+    reg[4:0] state, state_next; //original reg[2:0]
+    reg [11:0] colour;
+    reg [COUNTER_WIDTH:0] count;
+    
+    always@* begin
+
+        red_next  <= 4'b0000;
+        green_next <= 4'b0000;
+        blue_next  <= 4'b0000;
+        
+        state_next = state;
+        case(state)
+            // Create a small pause to turn on monitor
+            BLACK: begin
+                //colour <= 12'b000000000000;
+                red_next  <= 4'b0000;
                 green_next <= 4'b0000;
                 blue_next  <= 4'b0000;
-            end 
-            if(count == COUNT_TO) begin
-                state_next = IRELAND;
+                if(count == COUNT_TO) begin
+                    state_next = POLAND;
+                end
             end
-        end
+        
+            POLAND: begin
+                // WHITE #FFFFFF
+                if(row >= 11'd0 && row <11'd240) begin
+                    red_next  <= 4'b1111;
+                    green_next <= 4'b1111;
+                    blue_next  <= 4'b1111;
+                end
+                // RED #DC143C
+                else if(row >= 11'd240 && row <11'd480) begin
+                    red_next   <= 4'b1101;
+                    green_next <= 4'b0000;
+                    blue_next  <= 4'b0000;
+                end 
+                if(count == COUNT_TO) begin
+                    state_next = IRELAND;
+                end
+            end
+            .
+            .
+            .
+            NETHERLANDS: begin
+                // RED #A32638
+                if(row >= 11'd0 && row <11'd160) begin
+                    red_next   <= 4'b1010;
+                    green_next <= 4'b0010;
+                    blue_next  <= 4'b0011;
+                end
+                // WHITE #FFFFFF
+                else if(row >= 11'd160 && row <11'd320) begin
+                    red_next   <= 4'b1111;
+                    green_next <= 4'b1111;
+                    blue_next  <= 4'b1111;
+                end
+                // BLUE #21468B
+                else if(row >= 11'd320 && row <11'd480) begin
+                    red_next   <= 4'b0010;
+                    green_next <= 4'b0100;
+                    blue_next  <= 4'b1000;
+                end
+                if(count == COUNT_TO) begin
+                    state_next = POLAND;
+                end
+          end
+      endcase
+          
+The colour cycle code gave me a state machine to switch between some colours. I have added to that code, simply expanding the given state machine, giving each state a new name, in my case the name of the country the flag is from.
 
-Briefly show how you changed the template code to display a different image. Demonstrate your understanding. Guideline: 1-2 short paragraphs.
+But that code switched the states very fast. So I have looked at the code to make the state machine count. I have found these lines.
+
+    parameter COUNTER_WIDTH = 32, 
+    parameter COUNT_FROM = 0,
+    parameter COUNT_TO = 32'b1 << 29,    // original 26
+    parameter COUNT_RESET = 32'b1 << 27) // original 27
+
+I have analysed the code and deduced that I am working with a 32 bit counter. The COUNT_TO variable sets the time. It was set to 26. Lets calculate the time between the colours.
+
+First we need to get the time it takes for 1 clock cycle to complete. As the Basys 3 has a on-board 100MHz clock, we need to divide by 1; 1/100x10^6 = 10ns. So each clock if 10ns, with the formula 2 ^ COUNT_TO X10x10^-6. After I apply the formula to the original value and mine, the difference is significant.
+
+ * COUNT_TO = 26  ->  0.671 seconds per colour
+ * COUNT_TO = 29  ->  5.368 seconds per colour
+
+With that time, my flags don't change too fast so that the viewer can think abou the flag and maybe try to figure out the country before it dissapears and you will have to wait through 16 flags total.
+
 ### **Simulation**
 Show how you simulated your own design. Are there any things to note? Demonstrate your understanding. Add a screenshot. Guideline: 1-2 short paragraphs.
 ### **Synthesis**
