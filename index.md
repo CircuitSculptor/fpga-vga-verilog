@@ -110,7 +110,7 @@ This work is from class work I did. It features the project pinout diagram in se
 
 To get this work into this blog, I didn't want to take a photo of it after looking back on the effort I took to get the VGA output recorded. So I decided to take a walk from the far side of campus to the library where I could use the printers their to scan my work. I have used the scanner before for my maths assignment submissions.
 
-> <img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjPinoutDiagramNotes.jpg" alt="Pinout Diagram from Class Notes" width="350"> <img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjSignalsNotes.jpg" alt="Signals from Class Notes" width="350">
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjPinoutDiagramNotes.jpg" alt="Pinout Diagram from Class Notes" width="350"> <img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjSignalsNotes.jpg" alt="Signals from Class Notes" width="350">
 
 ## Lab Work 17/11/2025
 
