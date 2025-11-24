@@ -1,0 +1,13 @@
+---
+layout: none
+redirect_to: "https://circuitsculptor.github.io/fpga-vga-verilog/"
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>FPGA VGA Driver Project using the Xilinx Basys 3</title>
+    <link>https://circuitsculptor.github.io/fpga-vga-verilog/</link>
+    <description>This feed is intentionally empty and redirects to the main site.</description>
+  </channel>
+</rss>
