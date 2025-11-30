@@ -8,9 +8,3 @@ description: "FPGA VGA Project Blog"
 # Build settings
 remote_theme: jekyll/minima
 
-exclude:
-  - feed.xml
-
-feed: false
-atom_feed: false
-rss: false
