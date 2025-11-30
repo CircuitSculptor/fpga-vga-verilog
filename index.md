@@ -171,7 +171,7 @@ I have analysed this code and deduced that I am working with a 32 bit counter. T
 
 First we need to get the time it takes for 1 clock cycle to complete. As the Basys 3 has a on-board 100MHz clock, we need to divide by 1 to get the time per clock cycle:
 
-<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjFraction.png" alt="1/100MHz fraction" width="250">
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjFraction.png" alt="1/100MHz fraction" width="200">
 
 So each clock is 10ns, a very small amount of time. With the following formula we find the time delay:
 
@@ -182,7 +182,7 @@ After I applied the formula to the original value and the new value, the differe
  * COUNT_TO = 26  ->  0.671 seconds per colour
  * COUNT_TO = 29  ->  5.368 seconds per colour
 
-With that time, my flags don't change too fast so that the viewer can think about the flag and maybe try to figure out the country before it disappears and you will have to wait through 16 flags total.
+With that time delay, my flags don't change too fast so that the viewer can think about the flag and maybe try to figure out the country before it disappears and you will have to wait through 16 flags to see that one flag again.
 
 ### **Code Description**
 
