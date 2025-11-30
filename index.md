@@ -181,6 +181,8 @@ $$
 2^{COUNT\\_TO} \times 10 \times 10^{-8}
 $$
 
+2<sup>COUNT_TO</sup> × 10 × 10<sup>-8</sup>
+
 After I applied the formula to the original value and the new value, the difference is significant.
 
  * COUNT_TO = 26  ->  0.671 seconds per colour
