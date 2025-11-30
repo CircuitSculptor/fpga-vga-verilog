@@ -171,15 +171,9 @@ I have analysed this code and deduced that I am working with a 32 bit counter. T
 
 First we need to get the time it takes for 1 clock cycle to complete. As the Basys 3 has a on-board 100MHz clock, we need to divide by 1 to get the time per clock cycle:
 
-$$
-\frac{1}{100 \times 10^6} = 10\text{ns}
-$$
+<img src="https://raw.githubusercontent.com/circuitsculptor/fpga-vga-verilog/main/docs/assets/images/VGAPrjFraction.png" alt="1/100MHz fraction" width="250">
 
 So each clock is 10ns, a very small amount of time. With the following formula we find the time delay:
-
-$$
-2^{COUNT\\_TO} \times 10 \times 10^{-8}
-$$
 
 2<sup>COUNT_TO</sup> × 10 × 10<sup>-8</sup>
 
